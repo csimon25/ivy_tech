@@ -12,18 +12,31 @@ public class Program
 		RunProgram();
 	}
 
-	// TODO - EDIT:
-	private static void RunProgram()
-	{
-		// Given the refactored functions below, fill out this RunProgram function so that
-		// it matches the functionality of the original program. In other words -
-		// The two programs should to exactly the same thing. You do not need to write any
-		// code outside of this function to make the program work.
-
-		// Don't worry if you don't know what everything does - you can still get this to work
-		// as long as you know how to call functions and use the basic control structures shown
-		// in the original file.
-	}
+   // TODO - EDIT:
+   static void RunProgram()
+{
+   var points = InitializePoints();
+   var commands = new List<char> { 'a', 'p', 'q' };
+		
+   while (true)
+   {
+    
+       var command = GetCommand(commands);
+		
+       if (command == 'a')
+       {
+	   AddPoint(points);
+       }
+       else if (command == 'p')
+       {
+	   PrintPoints(points);
+       }
+       else if (command == 'q')
+       {
+           break;
+       }
+   }
+}
 
 	// DO NOT EDIT
 	private static void AddPoint( List<(double x, double y)> points )
